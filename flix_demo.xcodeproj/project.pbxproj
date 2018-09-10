@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		21BC8677214648E500650555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC8676214648E500650555 /* AppDelegate.swift */; };
-		21BC8679214648E500650555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC8678214648E500650555 /* ViewController.swift */; };
 		21BC867C214648E500650555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21BC867A214648E500650555 /* Main.storyboard */; };
 		21BC867E214648E700650555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21BC867D214648E700650555 /* Assets.xcassets */; };
 		21BC8681214648E700650555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21BC867F214648E700650555 /* LaunchScreen.storyboard */; };
 		21BC868C214648E700650555 /* flix_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC868B214648E700650555 /* flix_demoTests.swift */; };
 		21BC8697214648E700650555 /* flix_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC8696214648E700650555 /* flix_demoUITests.swift */; };
+		21BC86A521465AF200650555 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC86A421465AF200650555 /* NowPlayingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		21BC8673214648E500650555 /* flix_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21BC8676214648E500650555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21BC8678214648E500650555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21BC867B214648E500650555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21BC867D214648E700650555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21BC8680214648E700650555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		21BC8692214648E700650555 /* flix_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flix_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21BC8696214648E700650555 /* flix_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flix_demoUITests.swift; sourceTree = "<group>"; };
 		21BC8698214648E700650555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21BC86A421465AF200650555 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				21BC8676214648E500650555 /* AppDelegate.swift */,
-				21BC8678214648E500650555 /* ViewController.swift */,
+				21BC86A421465AF200650555 /* NowPlayingViewController.swift */,
 				21BC867A214648E500650555 /* Main.storyboard */,
 				21BC867D214648E700650555 /* Assets.xcassets */,
 				21BC867F214648E700650555 /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21BC8679214648E500650555 /* ViewController.swift in Sources */,
+				21BC86A521465AF200650555 /* NowPlayingViewController.swift in Sources */,
 				21BC8677214648E500650555 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
