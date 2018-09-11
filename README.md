@@ -28,20 +28,19 @@ The following **additional** user stories are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. The auto layout restraints took me a while to understand. I want to know if I learned it correctly and if there is an easily way to use it.
+2. 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/Q9p5xs0.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+<img src='https://github.com/Amzad/Flix-Demo/blob/master/videowalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+Had some issues with commiting milestones where using the terminal would cause xcode to revert all changes for some reason. Ended up only using the source control on xcode itself to commit and save all changes.
 
 ## License
 
