@@ -19,13 +19,14 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        activityCircle.startAnimating()
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didCallToRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
 
         tableView.dataSource = self
         fetchMovies()
+        
     }
     
     @objc func didCallToRefresh(_ refreshControl: UIRefreshControl) {
@@ -41,7 +42,16 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error = error {
+                let alertController = UIAlertController(title: "Unable to Connect", message: "No network connection", preferredStyle: .alert)
+                let tryAgainAction = UIAlertAction(title: "Try again", style: .default, handler: {
+                    (action) in self.fetchMovies()
+                })
+                alertController.addAction(tryAgainAction)
+                self.present(alertController, animated: true) {
+                    
+                }
                 print(error.localizedDescription)
+                
             } else if let data = data {
                 let DataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
@@ -49,6 +59,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 self.movies = movies
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                self.activityCircle.stopAnimating()
                 
             }
         }
