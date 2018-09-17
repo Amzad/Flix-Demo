@@ -23,14 +23,13 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
         searchBar.delegate = self
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didCallToRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
-
-        tableView.dataSource = self
-        definesPresentationContext = true
+        
         fetchMovies()
     }
     
@@ -45,6 +44,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error = error {
+                // Show alert for no network connection
                 let alertController = UIAlertController(title: "Unable to Connect", message: "No network connection", preferredStyle: .alert)
                 let tryAgainAction = UIAlertAction(title: "Try again", style: .default, handler: {
                     (action) in self.fetchMovies()
@@ -66,6 +66,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
             }
         }
         
+        // End refreshing on success or fail
         self.refreshControl.endRefreshing()
         self.activityCircle.stopAnimating()
         task.resume()
@@ -84,9 +85,12 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
         
+        let backgroundView = UIView() // Background coloor
+        backgroundView.backgroundColor = UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)
+        cell.selectedBackgroundView = backgroundView
+
         
         if let posterPathString = movie["poster_path"] as? String {
-            
             let placeholderImage = UIImage(named: "placeholder")
             let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
                 size: cell.posterView.frame.size,
@@ -107,6 +111,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
                                         imageTransition: .crossDissolve(0.2),
                                         runImageTransitionIfCached: false,
                                         completion: { response in
+                                            // Replace low res image with high res
                                             cell.posterView.af_setImage(withURL: posterHighURL)
                                         }
             )
@@ -115,7 +120,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
         else {
             // No poster image. Can either set to nil (no image) or a default movie poster image
             // that you include as an asset
-            cell.posterView.image = nil
+            cell.posterView.image = UIImage(named: "stockposter")
         }
         
         return cell
