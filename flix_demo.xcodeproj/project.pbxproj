@@ -91,6 +91,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21427594214F820A000BBE51 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				212C234C2147308E006C173C /* MovieCell.swift */,
+				21BC86A421465AF200650555 /* NowPlayingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		21427596214F8245000BBE51 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				21BC867A214648E500650555 /* Main.storyboard */,
+				21BC867F214648E700650555 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		21BC866A214648E500650555 = {
 			isa = PBXGroup;
 			children = (
@@ -116,12 +134,10 @@
 		21BC8675214648E500650555 /* flix_demo */ = {
 			isa = PBXGroup;
 			children = (
+				21427596214F8245000BBE51 /* Storyboard */,
+				21427594214F820A000BBE51 /* ViewController */,
 				21BC8676214648E500650555 /* AppDelegate.swift */,
-				21BC86A421465AF200650555 /* NowPlayingViewController.swift */,
-				21BC867A214648E500650555 /* Main.storyboard */,
 				21BC867D214648E700650555 /* Assets.xcassets */,
-				21BC867F214648E700650555 /* LaunchScreen.storyboard */,
-				212C234C2147308E006C173C /* MovieCell.swift */,
 				21BC8682214648E700650555 /* Info.plist */,
 			);
 			path = flix_demo;
