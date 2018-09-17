@@ -36,7 +36,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/Amzad/Flix-Demo/blob/master/videowalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Amzad/Flix-Demo/blob/master/flix2gif.gif?raw=true' title='Video Walkthrough' width='20' alt='Video Walkthrough' />
 
 ## Notes
 
