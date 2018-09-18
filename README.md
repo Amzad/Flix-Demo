@@ -30,7 +30,6 @@ The following **additional** user stories are implemented:
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
 1. The auto layout restraints took me a while to understand. I want to know if I learned it correctly and if there is an easily way to use it.
-2. 
 
 ## Video Walkthrough
 
@@ -59,44 +58,53 @@ Had some issues with commiting milestones where using the terminal would cause x
     See the License for the specific language governing permissions and
     limitations under the License.
     
+
 # Project 2 - Flix_demo
 
 Flix_Demo is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: 0 hours spent in total
+Time spent: 10 hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] User can tap a cell to see a detail view (+5pts)
-- [ ] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView (+5pts)
+- [x] User can tap a cell to see a detail view (+5pts)
+- [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView (+5pts)
 
 The following **stretch** features are implemented:
 
-- [ ] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
+- [x] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
 - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer (+3pts)
-- [ ] Customize the navigation bar (+1pt)
-- [ ] List in any optionals you didn't finish from last week (+1-3pts)
-   - ...
-   - ...
+- [x] Customize the navigation bar (+1pt)
+- [x] List in any optionals you didn't finish from last week (+1-3pts)
+The below are the optionals I completed this week but also have been updated above.
+- [x] User can search for a movie (+3pt)
+- [x] While poster is being fetched, user see's a placeholder image (+1pt)
+- [x] User sees image transition for images coming from network, not when it is loaded from cache (+1pt)
+- [x] Customize the selection effect of the cell (+1pt)
+- [x] For the large poster, load the low resolution image first and then switch to the high resolution image when complete (+2pt)
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] Search bar button to cancel the editting mode.
+- [x] Better visuals by paying attention to layout and dark mode
+- [x] Replaced the overviewlabel with a textfield instead so if the overview exceeds the size, the user can scroll to read the rest
+- [x] Tapping the poster to view a video doesn't feel intuative for a user so I opted to add a transparent button instead.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. Better way to implement the video player since webui is deprecated.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Amzad/Flix-Demo/blob/master/searchgif.gif?raw=true' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+<img src='https://github.com/Amzad/Flix-Demo/blob/master/superhero.gif?raw=true' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
+
+GIF created with Quicktime Screen Record and ezgif.com
 
 ## Notes
 
