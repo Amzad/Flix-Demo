@@ -13,17 +13,19 @@ enum MovieKeys {
     static let overview = "overview"
     static let backdropPath = "backdrop_path"
     static let posterPath = "poster_path"
+    static let movieID = "id"
 }
 
 class DetailViewController: UIViewController {
 
     
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backDropImageView: UIImageView!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var releaseDateLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var overviewField: UITextView!
     
     var movie: [String: Any]?
     
@@ -34,8 +36,8 @@ class DetailViewController: UIViewController {
         if let movie = movie {
             titleLabel.text = movie[MovieKeys.title] as? String
             releaseDateLabel.text = movie[MovieKeys.releaseDate] as? String
-            overviewLabel.text = movie[MovieKeys.overview] as? String
-            overviewLabel.sizeToFit()
+            overviewField.text = movie[MovieKeys.overview] as? String
+            //overviewLabel.sizeToFit()
             
             let backdropPathString = movie[MovieKeys.backdropPath] as! String
             let posterPathString = movie[MovieKeys.posterPath] as! String
@@ -47,6 +49,7 @@ class DetailViewController: UIViewController {
             let posterURL = URL(string: baseURLString + posterPathString)!
             posterImageView.af_setImage(withURL: posterURL)
             posterImageView.layer.borderWidth = 2
+            navigationItem.title = movie[MovieKeys.title] as? String
             
         
         }
@@ -55,24 +58,16 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let movieTrailerViewController = segue.destination as! MovieTrailerViewController
+            movieTrailerViewController.movieID = (movie![MovieKeys.movieID] as? Int)!
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

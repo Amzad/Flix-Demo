@@ -140,21 +140,18 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //searchBar.setShowsCancelButton(true, animated: true)
         filteredMovies = searchText.isEmpty ? movies : movies.filter{ (movie: [String: Any]) -> Bool in
                 return (movie["title"] as! String).localizedCaseInsensitiveContains(searchText)
-                //return (movie["title"](of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil)
         }
-
         tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
         if let indexPath = tableView.indexPath(for: cell) {
-        let movie = movies[indexPath.row]
+        let filteredMovie = movies[indexPath.row]
         let detailViewController = segue.destination as! DetailViewController
-            detailViewController.movie = movie
+            detailViewController.movie = filteredMovie
         }
     }
 
