@@ -37,7 +37,6 @@ class DetailViewController: UIViewController {
             titleLabel.text = movie[MovieKeys.title] as? String
             releaseDateLabel.text = movie[MovieKeys.releaseDate] as? String
             overviewField.text = movie[MovieKeys.overview] as? String
-            //overviewLabel.sizeToFit()
             
             let backdropPathString = movie[MovieKeys.backdropPath] as! String
             let posterPathString = movie[MovieKeys.posterPath] as! String
@@ -53,9 +52,6 @@ class DetailViewController: UIViewController {
             
         
         }
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     
@@ -67,7 +63,6 @@ class DetailViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
