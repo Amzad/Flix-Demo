@@ -10,6 +10,8 @@
 		187678E7AFABF6EBAC0C5831 /* Pods_flix_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C38ECA453DF20859742EA32 /* Pods_flix_demoUITests.framework */; };
 		212C234D2147308E006C173C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C234C2147308E006C173C /* MovieCell.swift */; };
 		2131411C21506D2E005EFD0A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2131411B21506D2E005EFD0A /* DetailViewController.swift */; };
+		2131411E2150805C005EFD0A /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2131411D2150805C005EFD0A /* PosterCell.swift */; };
+		2131412021508092005EFD0A /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2131411F21508092005EFD0A /* SuperheroViewController.swift */; };
 		21BC8677214648E500650555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC8676214648E500650555 /* AppDelegate.swift */; };
 		21BC867C214648E500650555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21BC867A214648E500650555 /* Main.storyboard */; };
 		21BC867E214648E700650555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21BC867D214648E700650555 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		212C234C2147308E006C173C /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		2131411B21506D2E005EFD0A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2131411D2150805C005EFD0A /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		2131411F21508092005EFD0A /* SuperheroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
 		21BC8673214648E500650555 /* flix_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21BC8676214648E500650555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21BC867B214648E500650555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,18 +100,20 @@
 		2131411A21506D09005EFD0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2131411B21506D2E005EFD0A /* DetailViewController.swift */,
+				212C234C2147308E006C173C /* MovieCell.swift */,
+				2131411D2150805C005EFD0A /* PosterCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		21427594214F820A000BBE51 /* ViewController */ = {
+		21427594214F820A000BBE51 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				212C234C2147308E006C173C /* MovieCell.swift */,
+				2131411B21506D2E005EFD0A /* DetailViewController.swift */,
 				21BC86A421465AF200650555 /* NowPlayingViewController.swift */,
+				2131411F21508092005EFD0A /* SuperheroViewController.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		21427596214F8245000BBE51 /* Storyboard */ = {
@@ -146,7 +152,7 @@
 			children = (
 				2131411A21506D09005EFD0A /* Views */,
 				21427596214F8245000BBE51 /* Storyboard */,
-				21427594214F820A000BBE51 /* ViewController */,
+				21427594214F820A000BBE51 /* ViewControllers */,
 				21BC8676214648E500650555 /* AppDelegate.swift */,
 				21BC867D214648E700650555 /* Assets.xcassets */,
 				21BC8682214648E700650555 /* Info.plist */,
@@ -408,6 +414,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				21BC86A521465AF200650555 /* NowPlayingViewController.swift in Sources */,
+				2131411E2150805C005EFD0A /* PosterCell.swift in Sources */,
+				2131412021508092005EFD0A /* SuperheroViewController.swift in Sources */,
 				21BC8677214648E500650555 /* AppDelegate.swift in Sources */,
 				212C234D2147308E006C173C /* MovieCell.swift in Sources */,
 				2131411C21506D2E005EFD0A /* DetailViewController.swift in Sources */,

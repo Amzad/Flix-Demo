@@ -46,7 +46,7 @@ class DetailViewController: UIViewController {
             
             let posterURL = URL(string: baseURLString + posterPathString)!
             posterImageView.af_setImage(withURL: posterURL)
-            
+            posterImageView.layer.borderWidth = 2
             
         
         }
