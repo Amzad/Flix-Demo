@@ -78,7 +78,8 @@ The following **stretch** features are implemented:
 - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer (+3pts)
 - [x] Customize the navigation bar (+1pt)
 - [x] List in any optionals you didn't finish from last week (+1-3pts)
-The below are the optionals I completed this week but also have been updated above.
+
+The below are the optionals I completed THIS week but also have been reflected in the readme above.
 - [x] User can search for a movie (+3pt)
 - [x] While poster is being fetched, user see's a placeholder image (+1pt)
 - [x] User sees image transition for images coming from network, not when it is loaded from cache (+1pt)
