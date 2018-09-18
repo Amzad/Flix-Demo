@@ -118,8 +118,6 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
             
         }
         else {
-            // No poster image. Can either set to nil (no image) or a default movie poster image
-            // that you include as an asset
             cell.posterView.image = UIImage(named: "stockposter")
         }
         
