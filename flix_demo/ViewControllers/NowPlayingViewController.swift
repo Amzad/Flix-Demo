@@ -26,6 +26,9 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
         tableView.dataSource = self
         searchBar.delegate = self
         
+        tableView.estimatedRowHeight = 160
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didCallToRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
@@ -123,19 +126,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
         
         return cell
     }
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.endEditing(true)
-        searchBar.setShowsCancelButton(false, animated: true)
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.endEditing(true)
-        searchBar.setShowsCancelButton(false, animated: true)
-    }
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.setShowsCancelButton(true, animated: true)
-    }
+
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredMovies = searchText.isEmpty ? movies : movies.filter{ (movie: [String: Any]) -> Bool in
