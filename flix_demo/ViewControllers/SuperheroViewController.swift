@@ -18,18 +18,33 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
         collectionView.dataSource = self
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 2
         let cellsPerLine:CGFloat = 2
         let interItemSpacingTotal = layout.minimumInteritemSpacing * (cellsPerLine - 1)
-        let width = collectionView.frame.size.width / cellsPerLine - interItemSpacingTotal / cellsPerLine
-        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
-        
-        
+        let cellWidth = collectionView.frame.width / cellsPerLine - interItemSpacingTotal / cellsPerLine
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth * (3/2))
+
         fetchMovies()
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 2
+        let cellsPerLine:CGFloat = 2
+        let interItemSpacingTotal = layout.minimumInteritemSpacing * (cellsPerLine - 1)
+        let cellWidth = collectionView.frame.width / cellsPerLine - interItemSpacingTotal / cellsPerLine
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth * (3/2))
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
