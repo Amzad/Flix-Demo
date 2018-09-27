@@ -131,7 +131,7 @@ Describe any challenges encountered while building the app.
 
 Flix-Demo is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: 2 hours spent in total
+Time spent: 5 hours spent in total
 
 ## User Stories
 
@@ -139,27 +139,27 @@ The following **required** user stories are complete:
 
 - The following screens use AutoLayout to adapt to various orientations and screen sizes
    - [x] Movie feed view (+3pt)
-   - [ ] Detail view (+2pt)
+   - [x] Detail view (+2pt)
 
 The following **stretch** user stories are implemented:
 
 - [x] Dynamic Height Cells (+1)
-- [ ] Collection View AutoLayout (+2)
+- [x] Collection View AutoLayout (+2)
 
 The following **additional** user stories are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality! (+1-3pts)
+- [x] Collectionview refreshes to view 2 or more cells per line instead of just 1
+- [x] Scrollview for detailed overview to be able to view the whole overview.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. Better trailer implementation
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
+<img src='https://github.com/Amzad/Flix-Demo/blob/master/yelp4.gif?raw=true' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
 
 GIF created with QuickTime Screen Recorder + ezgif.com
 
