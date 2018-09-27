@@ -159,7 +159,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/Amzad/Flix-Demo/blob/master/yelp4.gif?raw=true' title='Video Walkthrough' width='200' alt='Video Walkthrough' />
+<img src='https://github.com/Amzad/Flix-Demo/blob/master/yelp4.gif?raw=true' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 GIF created with QuickTime Screen Recorder + ezgif.com
 
